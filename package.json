@@ -1,0 +1,23 @@
+{
+  "name": "pokeman-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonMcGee0715/pokeman-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonMcGee0715/pokeman-game/issues"
+  },
+  "homepage": "https://github.com/JasonMcGee0715/pokeman-game#readme"
+}
