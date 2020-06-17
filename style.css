@@ -2,3 +2,17 @@
     display: flex;
     justify-content: space-evenly;
 }
+img {
+    width: 150px;
+    height:auto;
+    position: relative;
+    left: 0px;
+}
+ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -25,7 +25,7 @@ const getPokemonLeft = () => {
         const left = document.getElementById("left");
         const li = document.createElement("li");
         const pic = document.createElement("img");
-        pic.setAttribute("img", `${pokemon[0].sprites.front_default}`);
+        pic.setAttribute("src", `${pokemon[0].sprites.front_default}`);
         li.appendChild(document.createTextNode(pokemon[0].species.name));
         li.appendChild(pic);
         left.append(li)
@@ -44,18 +44,30 @@ const getPokemonRight = () => {
         pokemon.push(data)
         console.log(pokemon);
     })
-
-
-    //     const pokemonData = data.results;
-    //     const right = document.getElementById("right");
-    //     pokemonData.map(character => {
-    //         const li = document.createElement("li");
-    //         li.appendChild(document.createTextNode(character.name))
-    //         right.append(li)
-    //     })
-    // })
+    .then(data => {
+        const pokemonData = data;
+        const left = document.getElementById("right");
+        const li = document.createElement("li");
+        const pic = document.createElement("img");
+        pic.setAttribute("src", `${pokemon[1].sprites.front_default}`);
+        li.appendChild(document.createTextNode(pokemon[1].species.name));
+        li.appendChild(pic);
+        left.append(li)
+    })
 }
+
 
 const battle = () => {
     
+    if ((pokemon[0].stats[1].base_stat) > (pokemon[1].stats[1].base_stat)) {
+        winner = pokemon[0].species.name
+    }
+    else {
+        winner = pokemon[1].species.name
+    }
+    const ul = document.getElementById('battleResults');
+    const li = document.createElement('li');
+    const text = document.createTextNode(`${winner} wins!`);
+    li.appendChild(text);
+    ul.append(li);
 }
