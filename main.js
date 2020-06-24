@@ -76,8 +76,40 @@ const battle = () => {
 }
 //This reset button will eliminate the players and the winner. Currently have not 
 //reset and randomized characters, but it is not part of the assignment
+// const reset = () => {
+//     document.getElementById("right").innerHTML = null;
+//     document.getElementById("left").innerHTML = null;
+//     document.getElementById("battleResults").innerHTML = "";
+//   }
+
 const reset = () => {
-    document.getElementById("right").innerHTML = null;
-    document.getElementById("left").innerHTML = null;
-    document.getElementById("battleResults").innerHTML = "";
+    let right = document.getElementById("right");
+    let left = document.getElementById("left");
+    let results = document.getElementById("battleResults");
+
+    //---This code will require all ul's have Childnodes to be able to clear lists.
+    // while (right.hasChildNodes() && left.hasChildNodes() && results.hasChildNodes()) {
+    //     right.removeChild(right.firstChild);
+    //     left.removeChild(left.firstChild);
+    //     results.removeChild(results.firstChild)
+    // }
+
+
+    //---This code will look at each ul independently and remove childNodes when needed.
+    while (right.hasChildNodes()) {
+        right.removeChild(right.firstChild)
+    }
+    while (left.hasChildNodes()) {
+        left.removeChild(left.firstChild)
+    }
+    while (results.hasChildNodes()) {
+        results.removeChild(results.firstChild)
+    }
+    pokemon = []; // or pokemon.length = 0 --- Both will clear the array which is needed
+    //keep the game randomizing.
   }
+
+//   const listElement = document.getElementById('players');
+// while (listElement.hasChildNodes()) {
+// listElement.removeChild(listElement.firstChild);
+// }
