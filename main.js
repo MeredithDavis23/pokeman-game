@@ -107,7 +107,7 @@ const reset = () => {
     }
     pokemon = []; // or pokemon.length = 0 --- Both will clear the array which is needed
     //keep the game randomizing.
-  }
+    
 
 //   const listElement = document.getElementById('players');
 // while (listElement.hasChildNodes()) {
