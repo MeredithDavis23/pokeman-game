@@ -112,4 +112,4 @@ const reset = () => {
 //   const listElement = document.getElementById('players');
 // while (listElement.hasChildNodes()) {
 // listElement.removeChild(listElement.firstChild);
-// }
+}
